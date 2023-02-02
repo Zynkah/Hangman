@@ -23,11 +23,11 @@ def hangman():
         print('\n')
         guess = input("Guess a letter ").lower()
         # if letter is correctly guessed use $ in place of the correct letter
-        # otherwise increment by 1 the incorrect guess
         if guess in remaining_letters:
             character_index = remaining_letters.index(guess)
             letter_board[character_index] = guess
             remaining_letters[character_index] = '$'
+        # otherwise increment by 1 the incorrect guess
         else:
             wrong_guesses += 1
         print((' '.join(letter_board)))
